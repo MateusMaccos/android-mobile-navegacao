@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:navegacao/screens/categories_meals_screen.dart';
 import 'package:navegacao/screens/categories_screen.dart';
 import 'package:navegacao/screens/meal_detail_screen.dart';
+import 'package:navegacao/screens/tabs_sreen.dart';
 import 'package:navegacao/utils/app_routes.dart';
 
 void main() => runApp(const MyApp());
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'DeliMeals',
       theme: ThemeData(
+          primaryColor: Colors.orange,
           colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.orange)
               .copyWith(secondary: Colors.amber),
           fontFamily: 'Raleway',
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
                   fontSize: 20,
                   fontFamily: 'RobotoCondensed'))),
       routes: {
-        AppRoutes.HOME: (ctx) => const CategoriesScreen(),
+        AppRoutes.HOME: (ctx) => const TabsScreen(),
         AppRoutes.CATEGORIES_MEALS: (ctx) => const CategoriesMealsScreen(),
         AppRoutes.MEAL_DETAIL: (ctx) => const MealDetailScreen()
       },
